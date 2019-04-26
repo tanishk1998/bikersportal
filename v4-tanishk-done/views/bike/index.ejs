@@ -1,0 +1,47 @@
+<!-- including partials -->
+<%include ../partials/header %>
+
+	<div class="addbike-container">
+		
+		<p style="width: 20%; position: absolute;"><a href="/profile"><i class="fas fa-arrow-left fa-3x" style="color:black; margin: 20px 0 0 20px;"></i></a></p>
+		
+		<div class="container">
+			<p>
+				<a  class="btn btn-default addbike" href="/bikes/new"><i class="fas fa-plus"></i>Add New Bike</a>
+			</p>
+		</div>
+			
+		<div class="row text-center show-bikes">
+			<%data.forEach(function(event){ %>
+				<%if(event.author.id.equals(user._id)){%>
+
+					<div class="col-md-3 col-sm-6">
+						<div class="showbike-thumbnail thumbnail">
+							<img class="bike-image" src=<%=event.image%>>
+							<div class="caption">
+
+								<h4 class="bikedetails"><%= event.rtoNo %></h4>
+								<h4 class="bikedetails"><%= event.model %></h4>
+								<h4 class="bikedetails"><%= event.description %></h4>
+					
+								<p><a href="/bikes/<%=event._id%>/edit" style="color: #777;" class="btn addbike-edit"><i class="fas fa-pen fa-2x"></i></a></p>
+								
+								<form id="delete-form" action="/bikes/<%=event._id%>?_method=DELETE" method="POST">
+									<button class="btn addbike-delete" style="color: #777; background-color: transparent;"><i class="fas fa-trash fa-2x"></i></button> 
+								</form>
+							
+							</div>
+						</div>					
+					</div>
+
+				<%}%>
+			<%})%>
+				
+		</div>
+		
+
+		
+	</div>
+
+
+<%include ../partials/footer%>

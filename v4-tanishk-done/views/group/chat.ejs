@@ -1,0 +1,24 @@
+<%include ../partials/header %>
+
+	<div class="container">
+		<p class="chat-title">Chat!</p>
+		<%group.comments.forEach(function(comment){%>
+				<div class="row">
+					<div class="col-md-12">
+						<strong style="font-size: 30px; font-family: 'Raleway', sans-serif;
+						"><%= comment.author.username %></strong>
+						<p style="font-size: 15px; color: #555; font-family: 'Raleway', sans-serif;
+						"><%= comment.text%></p>
+						
+					</div>
+				</div>
+		<%}) %>
+
+		<form method="POST" action="/group/<%=group._id%>/chat">
+			<input type="text" name="text" style="width:80%; margin-top: 20px;" class="chat-input">
+			<input type="submit" class="btn btn-default createnew-submit1" value="Submit">
+		</form>
+
+	</div>
+
+<%include ../partials/footer %>

@@ -1,0 +1,43 @@
+{
+  "name": "bikers_portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/translate": "^3.0.1",
+    "@google-cloud/vision": "^0.25.0",
+    "body-parser": "^1.18.3",
+    "cloudinary": "^1.14.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "eval": "^0.1.3",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.4",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "googleapis": "^39.2.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.0",
+    "mongoose-dateonly": "^1.0.6",
+    "multer": "^1.4.1",
+    "nodemailer": "^6.1.1",
+    "nodemon": "^1.18.11",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "path": "^0.12.7",
+    "read-css": "^0.3.0"
+  },
+  "devDependencies": {
+    "locus": "^2.0.0"
+  }
+}

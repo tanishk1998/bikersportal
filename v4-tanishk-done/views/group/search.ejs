@@ -1,0 +1,11 @@
+<%include ../partials/header %>
+	<div class="container">
+		<p class="chat-title">Search!</p>
+		<form method="POST" action="/group/<%=id%>/search">
+			<input type="text" name="query" class="chat-input" placeholder="Search" style="font-family: 'Raleway', sans-serif;
+			">
+			<input type="submit" value="search" class="createnew-submit1" style="border: 1px solid black;">
+		</form>
+	</div>
+	
+<%include ../partials/footer %>

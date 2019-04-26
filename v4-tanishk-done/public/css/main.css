@@ -1,0 +1,1105 @@
+/*@font-face {
+    font-family: "medel";
+    src: url("/fonts/Medel.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}*/
+/*@font-face {
+    font-family: "azonix";
+    src: url("/fonts/Azonix.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}*/
+
+@font-face {
+    font-family: "gothamlight";
+    src: url("/fonts/Gotham Black Regular.ttf");
+}
+
+/* @font-face {
+    font-family: "gothamblack";
+    src: url("/fonts/Gotham Black.otf");
+}
+
+@font-face {
+    font-family: "scripting";
+    src: url("/public/fonts/SCRIPALT.ttf");
+} */
+
+.username{
+    position: absolute;
+    left:49%;
+    font-size: 100px;
+    font-family: 'gothamlight';
+    border: none !important;
+}
+
+.login-container{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+}
+
+html{
+    font-family: 'gothamlight';
+    height: 100%;
+}
+
+.username-label, .password-label{
+    font-family: 'gothamlight';
+    font-size: 30px;
+    margin-left: -3px;
+    width: 500px;
+    text-align: left;
+    /* position: absolute; */
+}
+  
+.title{
+position: absolute;
+top: 5%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+
+body {
+    font-family: 'gothamlight';
+    font-weight: 100;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    overflow-x: hidden; 
+    color: black;
+}
+
+
+div{
+    position: relative;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+.about-name {
+    font-family: 'gothamlight';
+}
+
+
+input{
+    /* display: inline-block; */
+    font-family: "gothamlight";
+    color: black;
+    letter-spacing: 2px;
+    padding-left: 3px;
+    outline: none;
+}
+
+
+.nav-login{
+    margin-right: 400px;
+    position: absolute;
+    left: 80%;
+    /* background-color: red; */
+}
+
+.nav-signup{
+    /* background-color: green; */
+}
+
+.homebg {
+    width: 100%;
+    min-height: 110vh;
+    background-color: transparent;
+    position: relative;
+    display: table;
+}
+.signup-title{
+    /* margin: 0 !important; */
+    margin-bottom: 0 0 20px 0 !important;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 80px;
+}
+
+.signup-container{
+    /* align-items: center */
+    justify-items: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 80px 80px 80px 80px;
+    grid-template-columns: 0.5fr 0.5fr;
+}
+
+.signup-container input{
+    font-size: 30px;
+    border: none;
+    /* background-color: red; */
+    margin-bottom: 15px;
+    justify-items: center;
+    color: black;
+}
+
+.signup-container input::placeholder{
+    color: black;
+}
+
+.signup-submit{
+    padding: 1rem 4rem;
+    margin-top: 30px;
+    font-size: 3rem;
+    border-radius:50px;
+    position: absolute;
+    left: 45%;
+}
+
+
+.signup-submit-div{
+    width: 100%;
+    /* margin-top: 10px; */
+}
+.uploads label{
+    /* background-color: red; */
+    /* justify-items: center; */
+    text-align: left;
+    width: 300px;
+    font-size: 30px;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: 'gothamlight';
+    color: black;
+}
+
+.uploads{
+    display: grid;
+    grid-gap: 10px;
+    justify-items: center;
+    grid-template-columns: 676px 865px;
+    /* justify-items: baseline; */
+}
+
+.input-cover, .input-profile{
+    justify-items: flex-start;
+    /* position: absolute; */
+    text-align: left;
+    width: 300px;
+    font-size: 30px;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: 'gothamlight';
+    color: black;
+}
+
+/* .dob{
+    color: black;
+} */
+.uploadbg {
+    width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+    position: relative;
+    display: table;
+}
+
+.toplogoimg {
+    position: relative;
+    display: block;
+    max-height: 10vh;
+    height: 45px;
+    top: 35px;
+    left: 35px;
+}
+
+text1 {
+    font-family: "gothamlight";
+    font-weight: 1000;
+    color: darkgray;
+    position: relative; 
+    display: block;
+    margin-left: 12vw;
+    font-size: 15px;
+    text-align: left;
+    letter-spacing: 5px;
+    
+    cursor: default;
+}
+.login-title{
+    font-size: 100px;
+}
+
+
+.login-form{
+    /*background-color: red; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.username, .password{
+    border:none;
+    border-bottom: 1px solid black; 
+}
+
+.login-username, .login-password{
+    font-size: 25px;
+    border: none;
+    /* padding: -4/px; */
+}
+
+.about-jumbotron{
+    z-index: 1;
+    /* font-family: 'Raleway', sans-serif; */
+    position: absolute;
+    left: 13%;
+    top: 23%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 50px;
+}
+.about-container{
+    margin: 0;
+    display: inline-block;
+    padding: 0;
+    z-index: 0;
+    margin: 0;
+    height: 93%;
+    width:100%;
+    position: absolute;
+    display: inline-block;
+    background-image: url("/images/adventure.jpg");
+    background-position: right;
+    background-size: 100%;
+    background-repeat: no-repeat;  
+}
+
+.jumbotron p{
+    margin-bottom: 10px !important;
+    font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron b{
+    font-family: 'gothamlight';
+}
+
+
+
+.edit-info-button{
+    border-radius: 50px;
+    padding: 1rem 4rem;
+    font-size: 25px;
+    background-color: transparent;
+    color: white;
+}
+.biker-logo{
+    position: absolute;
+    left: 60%;
+z-index: 0;
+}
+
+.description{
+    font-family: 'Raleway', sans-serif;
+
+}
+.submit-button{
+    padding: 1rem 4rem;
+    margin-top: 30px;
+    font-size: 3rem;
+    border-radius:50px;
+    position: absolute;
+    top: 330%;
+    left: -1%;
+}
+
+.skull-image{
+    height: 700px;
+    width: 1047px;
+    position: absolute;
+    top: -23%;
+    left: 104%;
+}
+.username-container, .password-container{
+    display: grid;
+    grid-template-rows: 90px 50px;
+    /* align-items: flex-start */
+}
+.login-button{
+    background-color: none;
+    outline: none;
+    border: 1px solid black;
+}
+
+
+.new-post{
+    width: 186px;
+    margin-bottom: 5px;
+}
+.navbar{
+    margin: 0 !important;
+}
+
+.container-fluid{
+    position: absolute;
+    width: 100%;
+}
+/*.collapse{
+    width: 100%;
+    position: absolute;
+    background-color: blue
+}*/
+
+.navbar-right{
+    position: absolute;
+    width:48%;
+    left: 60%;
+    /* background-color: yellow; */
+}
+.flint{
+    width: 186px;
+}
+
+.profile-pic{
+    position: absolute;
+    left: 10%;
+    height: auto; 
+    width: 400px; 
+    /* display: inline; */
+}
+
+.profile-container{
+    /* background-color: red; */
+    left: 50%;
+    top: 28%;
+    width: 40%;
+    position: absolute;
+}
+p{
+    margin: 0 !important;
+}
+.profile-buttons{
+    margin-right: 26px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: black;
+}
+.full-search{
+    /*background-color: red;*/
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+
+i{
+    margin-right: 10px;
+}
+
+.fa-search{
+    margin: 0px !important;
+}
+
+.search-bar-button{
+    border: none;
+    background-color: transparent;
+}
+.search-bar{
+    background-color: transparent;
+    width: 233px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+btn, label{
+    position: relative;
+    display:inline-block;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid white;
+    background-color: transparent;
+    
+    width: 200px;
+    height: 12px;
+    margin-left: 15px;
+    margin-top: 3vh;
+    
+    font-weight: 1000;
+    /* color: white; */
+    font-size: 12px;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    letter-spacing: 2px;
+    
+    cursor: pointer;
+}
+
+btn:hover, btn:focus, .inputfile + label:hover, .inputfile + label:focus{
+    background-color: white;
+    border-color: white;
+    color: black;
+    outline: 0;
+}
+
+btnalt {
+    position: relative;
+    display:inline-block;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid white;
+    background-color: white;
+    
+    width: 200px;
+    height: 12px;
+    margin-left: 15px;
+    margin-top: 3vh;
+    
+    font-family: 'gothamlight';
+    font-weight: 1000;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    letter-spacing: 2px;
+    
+    cursor: pointer;
+}
+
+btnalt:hover, btnalt:focus {
+    background-color: transparent;
+    color: white;
+    outline: 0;
+}
+
+.respbtn {
+    margin-left: 10vw;
+}
+
+
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#language {
+    display: inline-block;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+#lng{
+    margin-left : 11vw; 
+}
+
+@media only screen and (max-width: 600px) {
+    btn, btnalt, label {
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    text1 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #lng{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #language{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .respbtn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.imagelist {
+    display: table;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.imagelist li {
+    display: inline-block;
+    margin: 0 0 5vh 2vw;
+    padding: 0 2vw 0 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.imagelist li:last-child {
+    border: none;
+}
+
+.circleimg {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+}
+
+.imagelist li nm {
+    display: block;
+    margin: 6px 0 0 0;
+    font-size: 14px;
+    color: #828282;
+    text-align: center;
+    
+    
+    cursor: default;
+}
+
+@media only screen and (max-width: 311px){
+    .circleimg {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+text2 {
+    font-family: 'gothamlight';
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 3px;
+    
+    
+    cursor: default;
+}
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  
+  
+  hr{
+  height: 2px;
+  color: white;
+  }
+  
+  .style-two {
+    border: 0;
+    height: 2px;
+    transform: translate(-10%,-40%);
+    background-color:red;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+  
+  .about{
+  color: white;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  }
+  
+  .buttons{
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  left: 2%;
+  }
+  .facebook-login, .google-login, .local-login, .local-signup{
+  margin-bottom: 5px;
+  width: 50% !important;
+  }
+  #landing-header{
+    z-index: 1;
+    position: relative;        /* to use z index we need to use anything except position:static */
+    text-align: center;
+    padding: 40vh;
+  }
+  
+  #landing-header h1{
+    color:white;
+  }
+  
+  .slideshow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    z-index: 0;
+  }
+  
+  .slideshow li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: abc 50s linear infinite;
+  }
+  
+  .slideshow li:nth-child(1) { 
+  background-image: url(https://images.unsplash.com/photo-1515777315835-281b94c9589f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=787&q=80) 
+    }
+  .slideshow li:nth-child(2) { 
+  background-image: url(https://images.unsplash.com/photo-1552306062-29a5560e1c31?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+  background-image: url(https://images.unsplash.com/photo-1547906250-5bdf142c606d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=799&q=80);
+  animation-delay: 20s; 
+  }
+  .slideshow li:nth-child(4) { 
+  background-image: url(https://images.unsplash.com/photo-1505052533681-2be9d65eade5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+  animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+  background-image: url(https://images.unsplash.com/photo-1525012758503-e9e7c93032b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  animation-delay: 40s; 
+  }
+  
+  @keyframes abc { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+  }
+
+.newpost-container{
+    /* margin: 0 ! */
+    background-image: url("/images/done.jpg");
+    /* width: 100%; */
+    height: 93%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.newposts{
+    /* background-color: red; */
+    top: 36%;
+    left: 36%;
+    width: 100%;
+    position: absolute;
+}
+
+.newpost-title{
+    font-size: 50px;
+    top: 24%;
+    left: 36%;
+}
+.newposts input{
+    font-size: 30px;
+    border: none;
+    /* margin-bottom: 30px; */
+    background-color: transparent;
+}
+#newpost-title1{
+    border-bottom: 1px solid black !important;
+    width: 450px;
+    /* margin-bottom: 0px !important; */
+}
+
+#create-picture{
+    font-size: 15px !important;
+}
+
+.input-newpost textarea{
+    font-size: 30px;
+    margin-top: 10px;
+    width: 450px;
+    height: 200px;
+    resize: vertical;
+}
+.newpost-title{
+    position: absolute;
+    margin: 0 !important;
+    text-align: center;
+}
+
+.input-newpost1{
+    border-bottom: 1px solid black;
+    margin-bottom: 8px;
+    width: 500px;
+}
+
+.input-newpost1::value{
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+
+}
+#input-newpost1-choosefile{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.createnew-submit{
+    background-color: transparent;
+    border-radius: 50px;
+    position: absolute;
+    font-size: 30px;
+    padding: 1rem 4rem;
+    margin-top: 20px;
+    left: 8%;
+}
+
+
+.thumbnail{
+    border: 1px solid black;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.thumbnail{
+    transition: transform .7s;
+}
+
+/* .thumbnail :hover{
+     transform: scale(1.1); 
+} */
+
+.addbike{
+    margin-top: 20px;
+    position: absolute;
+    left: 100%;
+    top: 5%;
+}
+
+.col-md-3{
+    /* position: absolute; */
+    margin-bottom: 20px;
+    width: 33% !important;
+    top: 30%;
+    left: 10%;
+}
+
+.show-bikes{
+    position: absolute;
+    top: 10%;
+}
+.bikedetails{
+    font-family: 'Raleway', sans-serif;
+}
+.addbike-container{
+    width: 90%;
+    height: 90%;
+}
+
+.bike-image{
+    /* margin: 20px; */
+    height: 300px !important;
+    width: 500px !important;    
+}
+
+/* .showbike-thumbnail{
+    width: 100%;
+} */
+.addbike-edit, .addbike-delete{
+    top: 13%;
+    position: absolute;
+}
+
+.addbike-edit{
+    left: 73%;
+}
+.addbike-delete{
+    left: 86%;
+}
+
+.caption{
+}
+.addbike-delete{
+    
+}
+
+.home-jumbotron{
+    margin-top: 10px;
+    width: 100%;
+    background-image: url("/images/ahall2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -900px; 
+}
+
+.home-container{
+    width: 100%;
+}
+
+.creategroup{
+    color: white;
+    height: 93.2%;
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    /* position: absolute; */
+    /* top: 0%; */
+    /* background-color: red; */
+    background-image: url("/images/15505.jpg");
+}
+
+.creategroup-title{
+    font-size: 100px;
+    margin-bottom: 50px;
+    top: 24%;
+    left: 36%;
+}
+.input-creategroup{
+    font-size: 30px;
+    border: none;
+    color: white;
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
+    background-color: transparent;
+}
+.input-creategroup::placeholder{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+}
+.creategroup-submit{
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 30px;
+    padding: 1rem 4rem;
+    margin-top: 20px;
+    color: white;
+}
+
+#group-upload{
+    font-size: 25px;
+}
+
+.sub-creategroup{
+    position: absolute;
+    top: 25%;
+    left: 4%;
+}
+
+
+
+.show-image{
+    position: absolute;
+    left: 15%;
+    margin-top: 15px;
+    height: 400px; 
+    width: 400px;
+}
+
+.show-caption{
+    width: 100%;
+    margin-top: 15px;
+    position: absolute;
+    left: 50%;
+}
+
+.show-top{
+    display: inline-block;
+}
+
+.show-edit, .show-delete, .show-title{
+    float:left;
+}
+
+.show-title{
+    margin: 0px;
+    font-size: 50px;
+    width: 100%;
+}
+
+.show-subcontainer{
+    width: 100%;
+    height: 100%;
+}
+
+.show-description{
+    font-family: 'Raleway', sans-serif;
+    width: 500px;
+}
+.show-comments{
+    width: 100%;
+    position: absolute;
+    top: 70%;
+}
+
+.show-container{
+    width: 100%;
+height: 100%;
+}
+
+.submittedby{
+    font-size: 20px;
+}
+.subgroup-button{
+    background-color: transparent;
+    color: black;
+    float: left;
+    /* border: 1px solid black; */
+}
+
+.createsubgroup-admin{
+    border: none;
+}
+
+.admin-image{
+    border-radius:50%;
+    width: 100px;
+    border: 3px solid green;
+    top: 100%; 
+    left: 100%;
+}
+
+.groupadmin-title{
+    color: black;
+
+    margin: 7px 0 8px 0;
+    /* position: absolute; */
+}
+
+.subgroup-container{
+    /* width: 100%;
+    height: 100%; */
+}
+.subgroup-caption{
+    position: absolute;
+    /* background-color: red; */
+    width: 100%;
+    /* height: 50%; */
+}
+
+.admin-container{
+    width: 100%;
+    height: 100%;
+}
+
+.subgroupadmindetails{
+    position: absolute;
+    left: 90%;
+    margin-top: 20px
+    /* top: 10%; */
+    /* background-color: yellow; */
+}
+
+.group-image{
+    height: auto; 
+    width: 300px;
+    position: absolute;
+    left: 20%; 
+    top: 151%;
+}
+
+.group-name{
+    font-size: 100px;
+    text-align:center;
+}
+.group-icons{
+    /* background-color: red; */
+    position: absolute;
+    left: 87%;
+    /* top: 20%; */
+    margin-top: 152px;
+    display: inline-block;
+    width: 249px;
+    position: absolute;
+}
+
+.group-description{
+    text-align: center;
+    position: absolute;
+    top: 159%;
+    width: 500px;
+    left: 50%;
+}
+
+.input-newpost2{
+    border-bottom: 1px solid black;
+    width: 400px; 
+    margin-bottom: 10px;
+}
+.group-aboutus{
+    font-size: 50px;
+}
+
+.group-subdescription{
+    font-family: 'Raleway', sans-serif;
+
+}
+.profile-newpost{
+    position: absolute;
+    top: 80%;
+}
+
+.adventures{
+    font-size: 30px;
+    position: absolute;
+    top: 71%;
+    left: 10%;
+    margin-bottom: 10px;
+}
+
+.chat-title{
+    font-size: 70px;
+}
+
+.createnew-submit1{
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 30px;
+    padding: 1rem 4rem;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.chat-input{
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 30px;
+    padding: 1rem 4rem;
+
+}
+.comment-icons{
+    display: inline-block;
+}
+
+.editcomment, .deletecomment{
+    float: left;
+}
+
+.col-md-12-comment{
+    margin-top: 20px;
+}

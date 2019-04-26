@@ -1,0 +1,28 @@
+<%include ../partials/header %>
+	<div class="container">
+		<h1 style="text-align: center;">EDIT...</h1>
+		<div style="width:30%; margin:25px auto;">
+			<form method="POST" action="/bikes/<%=bike._id%>?_method=PUT" enctype="multipart/form-data">
+				<div class="form-group">
+					<input type="text" class="form-control" name="bike[rtoNo]" value="<%=bike.rtoNo%>">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="bike[image]" value="<%=bike.image%>">
+				</div>
+				<div class="form-group">
+					<input type="text" name="bike[model]" value="<%=bike.model%>">
+				</div>
+				<div class="form-group">
+					<input type="text" name="bike[description]" value="<%=bike.description%>" style="height:90px; width:100%;">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">SUBMIT</button>
+				</div>	
+			</form>
+			<a href="/bikes">GO BACK</a>
+		</div>
+		
+		
+	</div>
+	
+<% include ../partials/footer %>

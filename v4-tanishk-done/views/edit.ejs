@@ -1,0 +1,35 @@
+<%include ./partials/header %>
+	<div class="newpost-container">
+		<a href="/profile"><i class="fas fa-arrow-left fa-3x" style="color: black"></i></a>
+		<h1 style="text-align: center;" class="newpost-title">Edit <%=user.name%></h1>
+		<div style="width:30%; margin:25px auto;" class="newposts">
+			<form method="POST" action="/profile/<%=user._id%>?_method=PUT" enctype="multipart/form-data">
+				<div class="input-newpost2">
+					<input type="text"  name="user[name]" value="<%=user.name%>">
+				</div>
+				<div class="input-newpost2">
+					<input type="text" name="user[email]" value="<%=user.email%>">
+				</div>
+				<div class="input-newpost2">
+					<input type="text" name="user[address]" value="<%=user.address%>">
+				</div>
+				<!-- <div class="input-newpost1">
+					<input type="date" name="user[DOB]" value="<%=user.DOB%>">
+				</div> -->
+				<div class="input-newpost2">
+					<input type="text" name="user[description]" value="<%=user.description%>" style="height: 60px; padding: 0px;">
+				</div>
+				<div>
+					<input id="input-newpost1-choosefile" type="file"  name="user[profilePhoto]" value="<%=user.profilePhoto%>">
+				</div>
+
+				<div>
+					<button class="btn btn-default createnew-submit">Submit</button>
+				</div>	
+			</form>
+		</div>
+		
+		
+	</div>
+	
+<% include ./partials/footer %>

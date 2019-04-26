@@ -1,0 +1,51 @@
+<!-- FIRST including partials -->
+<%include ../partials/header %>
+
+	<div class="home-container">
+		<header class="jumbotron home-jumbotron">
+			<div class="container">
+				<h1>Welcome To Biker's Portal</h1>
+				<p>
+					<a  class="btn btn-primary btn-lg new-post" href="/posts/new">Add New Posts</a><br>
+					<a href="/flint"  class="btn btn-primary btn-lg flint">Flint</a>
+				</p>
+			</div>
+			
+		</header>
+		
+		<div class="row text-center">
+			<!-- sort the posts -->
+			<%data.sort(function(a,b){%>
+			<%return b.created-a.created%>
+			<%})%>
+
+			<%data.forEach(function(event){ %>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src=<%=event.image%>>
+						
+					</div>
+					
+					<div class="caption">
+							<h4 style="color: black;"><%= event.title%></h4>
+							<p><%=event.descrition%></p>
+							<p><a href="/posts/<%=event._id%>" class="btn btn-primary more-info">More Info</a></p>
+					</div>
+				</div>
+			<%})%>
+				
+		</div>
+		
+
+		
+	</div>
+
+
+<%include ../partials/footer%>
+
+
+
+
+
+
+

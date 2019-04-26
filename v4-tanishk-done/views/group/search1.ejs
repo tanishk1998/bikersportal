@@ -1,0 +1,28 @@
+<%include ../partials/header %>
+<a href="/group/<%=id%>/add"><i class="fas fa-arrow-left fa-3x" style="color:black; margin: 20px 0 0 20px;"></i></a>
+	<%if(user){%>
+		<div class="row text-center">
+			<%user.sort(function(a,b){%>
+			<%return b.created-a.created%>
+			<%})%>
+			<%user.forEach(function(event){ %>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src=<%=event.profilePhoto%>>
+						<div class="caption">
+							<h4><%= event.name %></h4>
+							<!-- <p><a href="/profile/<%=event._id%>" class="btn btn-primary">MORE INFO</a></p> -->
+							<form method="POST" action="/group/<%=id%>/member/<%=event._id%>">
+								<input type="submit" value="Add to group" class="createnew-submit1" style="font-size: 15px;">
+							</form>
+							
+						</div>
+					</div>
+					
+					
+				</div>
+			<%})%>
+				
+		</div>
+	<%}%>
+<%include ../partials/footer %>

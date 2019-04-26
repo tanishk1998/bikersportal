@@ -1,0 +1,44 @@
+<%include ../partials/header %>
+	<div class="subgroup-container">
+		<div class="row text-center admin-container">
+
+			<% group.members.forEach(function(event){ %>
+				
+				<div class="subgroup-caption">
+					<div class="subgroupadmindetails">
+						<img href="/profile/<%=event._id%>" class="admin-image" src=<%=event.profilePhoto%>>
+						<h4 class="groupadmin-title">Admin</h4>
+						<!-- <h4><%= event.name %></h4> -->
+						<!-- <p><a href="/profile/<%=event._id%>" class="btn btn-primary">More Info</a></p> -->
+					</div>
+					
+					<div class="group-icons">
+						<%if(user && group.author.id.equals(user._id)){%>
+							<a href="/group/<%=group._id%>/add" class="btn subgroup-button"><i class="fas fa-plus" title="Add Members"></i></a>
+							
+							<a class="btn subgroup-button" href="/group/<%=group._id%>/edit"><i class="fas fa-pen" title="Edit"></i></a>
+							
+							<form id="delete-form" action="/group/<%=group._id%>?_method=DELETE" method="POST">
+								<button class="btn subgroup-button"><i class="fas fa-trash-alt"  title="Delete"></i></button>
+							</form>
+							<%}%>
+							<a href="/group/<%=group._id%>/chat" class="btn subgroup-button"><i class="fas fa-comment" title="Chat"></i></a>
+					</div>
+						
+				</div>
+			
+			<%})%>
+
+		</div>
+		<p class="group-name"><%=group.name%></p>
+		<img src="<%=group.image%>" class="img-responsive group-image" alt="Responsive image">
+		
+		<div class="group-description">
+			<p class="group-aboutus">About Us!</p>
+			<p class="group-subdescription"><%=group.description%></p>
+		</div>
+		
+			
+	</div>
+
+<%include ../partials/footer %>

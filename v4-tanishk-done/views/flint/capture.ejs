@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title>FLINT</title>
+    <meta name="description" content="Foriegn Language Image to Native Text Translation">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    
+    <script src="/scripts/jquery-3.3.1.min.js"></script>
+    <script src="/scripts/aos.js"></script>
+    <script src="/scripts/imagesloaded.pkgd.min.js"></script>
+    <script src="/scripts/pace.min.js"></script>
+        <link href="/css/pace-theme-minimal.css" rel="stylesheet" />
+    <script src="/scripts/parallax.min.js"></script>
+    
+</head>
+
+<body>
+
+    <script>
+    
+        AOS.init({
+            duration: 1200,
+            once: true,
+        })
+    
+    </script>
+    
+    <div id="home" class="homebg" data-parallax="scroll" data-image-src="/images/bg.png" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+        
+        <div style="height: 15vh">
+            <a href="/" tabindex="-1"><img src="/images/logo.png" class="toplogoimg" data-aos="fade-right" data-aos-duration="1000"></a>
+        </div>
+        
+        <div style="height: 35vh"></div>
+        
+        <text1 data-aos="fade-up">FOREIGN LANGUAGE IMAGE TO NATIVE TEXT TRANSLATION.</text1>
+        
+        <div style="height: 10vh"></div>
+        
+        <div class="respbtn" data-aos="fade-up" data-aos-duration="2000">
+            <a href="#upload" tabindex="-1"><btn>UPLOAD</btn></a>
+           <!--  <a href="#aboutus" tabindex="-1"><btn>ABOUT US</btn></a> -->
+        </div>
+        
+    </div>
+    
+    <!-- <div id="aboutus" style="height: 99vh; background-color: white">
+        
+        <div style="height: 25vh"></div>
+        
+        <text2 style="font-size: 20px; color: deepskyblue">OUR</text2>
+        
+        <div style="height: 2vh"></div>
+        
+        <text2 style="font-size: 45px; color: #828282">TEAM</text2>
+        
+        <div style="height: 7vh"></div>
+        
+        <ul class="imagelist" style="margin-left: auto; margin-right: auto">
+            <li><img src="images/team/vanshdhar.png" alt="Vansh Dhar" class="circleimg"><nm>Vansh Dhar</nm></li>
+            <li><img src="images/team/yashdatta.png" alt="Yash Datta" class="circleimg"><nm>Yash Datta</nm></li>
+            <li><img src="images/team/tanmayarora.png" alt="Tanmay Arora" class="circleimg"><nm>Tanmay Arora</nm></li>
+            <li><img src="images/team/yashjain.png" alt="Yash Jain" class="circleimg"><nm>Yash Jain</nm></li>
+            <li><img src="images/team/yashpatel.png" alt="Yash Patel" class="circleimg"><nm>Yash Patel</nm></li>
+        </ul>
+        
+    </div> -->
+    
+    <div id="upload" class="uploadbg" data-parallax="scroll" data-image-src="/images/bg.png" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+        
+        <div style="height: 35vh"></div>
+        
+        <text1 style="text-align: center; margin: 0" data-aos="fade-up">UPLOAD</text1>
+        
+        <div style="height: 1vh"></div>
+        
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.4); margin: 0 40vw 0 40vw" data-aos="fade-up" data-aos-duration="1600"></div>
+        
+        <div style="height: 10vh"></div>
+        
+        <form id="imageinputform" action="/flint" method="POST" enctype="multipart/form-data" >
+            <div class="respbtn" data-aos="fade-right" data-aos-duration="2000">
+
+                <input type="file" name="myImage" class="inputfile" id="file" tabindex="-1" />
+                <label for="file" style="width: 70px; padding-top: 10px; padding-bottom: 10px; border: 1px solid rgba(255,255,255,0.4)">FILE</label>
+
+                <div style="height: 1vh"></div>
+                
+                <text1 id="filenamemsg" style="margin-left:1.5vw; font-size: 10px; font-weight: 100"><%= typeof filemsg != 'undefined' ? filemsg : "File Not Selected." %></text1>
+                
+                <script>
+                    
+                    var input = document.getElementById( 'file' );
+                    var infoArea = document.getElementById( 'filenamemsg' );
+                    
+                    input.addEventListener( 'change', showFileName );
+                    
+                    function showFileName( event ) {
+                        
+                      var input = event.srcElement;
+                      var fileName = input.files[0].name;
+                      infoArea.textContent = 'File : ' + fileName;
+                        
+                    }
+                    
+                </script>
+                
+            </div>
+
+            <div style="height: 7vh"></div>
+        
+            <div id="lng" style="color: white; cursor: default;" data-aos="fade-right" data-aos-duration="2000">
+                <text1 style="margin-left: 0">Native Language
+                    <input list="languages" id="language" name="translate" tabindex="-1" />
+                    <datalist id="languages">
+                        <%language.forEach(function(event){%>
+                        <option value=<%=event.name%>>
+                      <%})%>
+                    </datalist>
+                </text1>
+            </div>
+        
+            <div style="height: 10vh"></div>
+            
+            <div class="respbtn" data-aos="fade-up" data-aos-duration="2000">
+                <a onclick="document.getElementById('imageinputform').submit();"><btnalt style="width: 100px; padding-top: 12px; padding-bottom: 12px" tabindex="-1">SUBMIT</btnalt></a>
+            </div>
+        </form>
+        
+    </div>
+
+</body>
+</html>

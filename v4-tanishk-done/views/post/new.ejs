@@ -1,0 +1,27 @@
+<%include ../partials/header %>
+	<div class="newpost-container">
+		<a href="/posts"><i class="fas fa-arrow-left fa-3x" style="color: black"></i></a>
+		<h1 class="newpost-title">Create New Event</h1>
+		<div class="newposts">
+			<form method="POST" action="/posts" enctype="multipart/form-data">
+				<div class="input-newpost" id="newpost-title1">
+					<input type="text" name="title" placeholder="Title">
+				</div>
+
+				<div class="input-newpost">
+					<textarea type="text" name="description" placeholder="Description"></textarea>
+				</div>
+
+				<div id="create-picture">
+					<input type="file" name="image" placeholder="image">
+				</div>
+				<div class="input-newpost">
+					<button class="btn btn-default createnew-submit">Submit</button>
+				</div>	
+			</form>
+		</div>
+		
+		
+	</div>
+	
+<%include ../partials/footer %>

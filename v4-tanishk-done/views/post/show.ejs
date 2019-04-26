@@ -1,0 +1,61 @@
+<%include ../partials/header%>
+	<div class="show-container">
+		<div class="col-md-9 show-subcontainer">
+
+			<p><img  class="img-responsive show-image" src=<%=post.image%>></p>
+			
+			<div class="caption-full show-caption">
+				<div class="row show-top">
+					<h4 class="show-title" style="color:black"><a><%= post.title%></a></h4>
+					
+				
+					<% if(currentUser && post.author.id.equals(currentUser._id)){ %>
+						<a class="btn show-edit" style="color: black;" href="/posts/<%=post._id%>/edit"><i class="fas fa-pen"></i></a>
+						
+						<form id="delete-form" class="show-delete" action="/posts/<%=post._id%>?_method=DELETE" method="POST">
+							<button class="btn" style="color: black; background-color: transparent;"><i class="fas fa-trash"></i></button>
+						</form>
+					<%}%>
+				
+				</div>
+				
+				<p class="submittedby">Submitted by <%=post.author.username%></p>
+				
+				<p class="show-description"><%=post.description%></p>
+
+				<iframe style="height: 200px " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5200.667597162436!2d75.5625807788561!3d26.844300817309417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4850e05bee9b%3A0x1b8d67402d4eb863!2sManipal+University+Jaipur!5e0!3m2!1sen!2sin!4v1556307010915!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				
+			</div>
+				
+			<div class="well show-comments">
+				<p><a href="/posts/<%=post._id%>/comments/new" class="btn btn-sm btn-success pull-right">ADD NEW COMMENT</a></p>
+				<%post.comments.forEach(function(comment){%>
+						<div class="row">
+
+							<div class="col-md-12 col-md-12-comment">
+								<p style="font-size: 25px;">
+
+									<%= comment.author.username %>
+								</p>
+								<span class="pull-right">10 days ago</span>
+
+								<p style="color: #555; font-size: 20px;">
+									<%= comment.text%>
+								</p>
+								<div class="commenticons">
+									<% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+										<a class="btn" href="/posts/<%=post._id%>/comments/<%=comment._id%>/edit"><i class="fas fa-pen editcomment" title="Edit" style="color: black;"></i></a>
+	
+										<form method="POST" class="deletecomment" id="delete-form" action="/posts/<%=post._id%>/comments/<%=comment._id%>?_method=DELETE">
+											<button style="background-color: transparent; border: none;"><i class="fas fa-trash-alt"  title="Delete"></i></button>
+										</form>
+									<%}%>
+								</div>
+
+							</div>
+						</div>
+				<%}) %>
+			</div>
+		</div>
+	</div>
+<%include ../partials/footer%>

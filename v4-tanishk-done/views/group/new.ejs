@@ -1,0 +1,12 @@
+<%include ../partials/header %>
+	<div class="creategroup">
+		<form action="/group" method="POST" enctype="multipart/form-data" class="sub-creategroup">
+			<h1 class="creategroup-title">Create Group</h1>
+			<input type="text" name="name" placeholder="Name" class="input-creategroup" autocomplete="off"><br>
+			<input type="text" name="description" placeholder="Description" class="input-creategroup" autocomplete="off">
+			<input type="file" name="image" class="input-creategroup" id="group-upload">
+
+			<input type="submit" name="submit" class="creategroup-submit">
+		</form>
+	</div>
+<%include ../partials/footer %>

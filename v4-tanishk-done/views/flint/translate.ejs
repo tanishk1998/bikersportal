@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title>FLINT</title>
+    <meta name="description" content="Foriegn Language Image to Native Text Translation">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    
+    <script src="/scripts/jquery-3.3.1.min.js"></script>
+    <script src="/scripts/aos.js"></script>
+    <script src="/scripts/imagesloaded.pkgd.min.js"></script>
+    <script src="/scripts/pace.min.js"></script>
+        <link href="/css/pace-theme-minimal.css" rel="stylesheet" />
+    <script src="/scripts/parallax.min.js"></script>
+    
+</head>
+
+<body>
+
+    <script>
+    
+        AOS.init({
+            duration: 1000,
+            once: true,
+        })
+    
+    </script>
+    
+    
+    <div id="home" class="homebg" data-parallax="scroll" data-image-src="/images/bg.png" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+        
+        <div style="height: 15vh">
+            <a href="/" tabindex="-1"><img src="/images/logo.png" class="toplogoimg" data-aos="fade-right" data-aos-duration="500"></a>
+        </div>
+        
+        <%var flag=0;%>
+        <%lang.forEach(function(event){%>
+            <% if(detect[0].language==event.target){%>
+        
+                <div style="height: 20vh"></div>
+        
+                <text1 data-aos="fade-right" data-aos-delay="500">Detected Language</text1>
+                <text1 style="border-bottom: 1px solid rgba(255,255,255,0.4); width: 250px; margin-top: 10px;" data-aos="fade-right" data-aos-delay="500"></text1>
+                <div style="height: 2vh"></div>
+                <text1 style="color: white;" data-aos="fade-up" data-aos-delay="500"><%=event.name%></text1>
+
+                <div style="height: 10vh"></div>
+
+                <text1 data-aos="fade-right" data-aos-delay="1500">Detected Text</text1>
+                <text1 style="border-bottom: 1px solid rgba(255,255,255,0.4); width: 250px; margin-top: 10px;" data-aos="fade-right" data-aos-delay="1500"></text1>
+                <div style="height: 2vh"></div>
+                <text1 style="color: white;" data-aos="fade-up" data-aos-delay="1500"><%=text%></text1>
+
+                <div style="height: 10vh"></div>
+
+                <text1 data-aos="fade-right" data-aos-delay="2500">Translation</text1>
+                <text1 style="border-bottom: 1px solid rgba(255,255,255,0.4); width: 250px; margin-top: 10px;" data-aos="fade-right" data-aos-delay="2500"></text1>
+                <div style="height: 2vh"></div>
+                <text1 style="color: white;" data-aos="fade-up" data-aos-delay="2500"><%=translation%></text1>
+        
+                <div style="height: 30vh"></div>
+        
+                <%flag=1;%>
+        
+            <%}%>
+        <%})%>
+        
+        <%if(flag==0){%>
+            
+            <div style="height: 20vh"></div>
+        
+            <text1 data-aos="fade-right" data-aos-delay="1500">SORRY !</text1>
+            <text1 style="border-bottom: 1px solid rgba(255,255,255,0.4); width: 250px; margin-top: 10px;" data-aos="fade-right" data-aos-delay="1500"></text1>
+            <div style="height: 2vh"></div>
+            <text1 style="color: white;" data-aos="fade-up" data-aos-delay="1500">Nothing Could Be Detected.</text1>
+        
+        <%}%>
+        
+    </div>
+    
+</body>
+</html>
+    

@@ -1,0 +1,49 @@
+<%include ./partials/header%>
+
+<h1 class="signup-title">Sign Up</h1>
+<form method="POST" action="/sign-up" enctype="multipart/form-data">
+	<div class="signup-container">
+		<div>
+			<input type="text" name="name" placeholder="Name" autocomplete="off">
+		</div>
+
+		<div>
+			<input type="text" name="username" placeholder="Username" autocomplete="off">
+		</div>
+
+		<div>
+			<input type="email" name="email" placeholder="Email" autocomplete="off">
+		</div>
+		<div>
+			<input type="text" name="address" placeholder="Address" autocomplete="off">
+		</div>
+		<div>
+			<input type="number" name="age" placeholder="Age" id="age" autocomplete="off">
+		</div>
+		<div>
+			<input type="text" name="description" placeholder="Description" style="height: 60px; padding: 0px;" autocomplete="off">
+		</div>
+		
+		<div>
+			<input type="password" name="password" placeholder="Password" autocomplete="off">
+		</div>
+
+		<!-- <div>
+			<input type="date" name="DOB" placeholder="Date Of Birth" class="dob" autocomplete="off">
+		</div> -->
+
+	</div>	
+	
+	<div class="uploads">
+		<div class="input-profile">
+			<label for="image1">Profile Picture</label>
+			<input type="file" id="image1" name="profilePhoto"  autocomplete="off">
+		</div>
+	</div>
+
+	<div class="signup-submit-div">
+		<button class="signup-submit btn btn-default">Submit</button>
+	</div>		
+
+	</form>
+<%include ./partials/footer%>

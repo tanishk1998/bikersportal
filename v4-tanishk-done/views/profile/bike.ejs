@@ -1,0 +1,21 @@
+<%include ../partials/header %>
+	<div class="row text-center">
+		<%data.forEach(function(event){ %>
+			<div class="col-md-3 col-sm-6">
+				<div class="thumbnail">
+					<img src=<%=event.image%>>
+					<div class="caption">
+						<h4><%= event.model %></h4>
+						<p><a href="/profile/<%=user%>" class="btn btn-primary">GO BACK</a></p>
+					</div>
+				</div>
+				
+				
+			</div>
+		<%})%>
+			
+	</div>
+	
+
+
+<%include ../partials/footer %>

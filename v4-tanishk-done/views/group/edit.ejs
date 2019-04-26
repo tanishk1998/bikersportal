@@ -1,0 +1,25 @@
+<%include ../partials/header %>
+	<div class="newpost-container">
+		<a href="/group/<%=group._id%>"><i class="fas fa-arrow-left fa-3x" style="color: black"></i></a>
+		<h1 style="text-align: center;" class="newpost-title">Edit <%=group.name%>...</h1>
+		<div style="width:30%; margin:25px auto;" class="newposts">
+			<form method="POST" action="/group/<%=group._id%>?_method=PUT" enctype="multipart/form-data">
+				<div class="input-newpost2">
+					<input type="text" name="group[name]" value="<%=group.name%>">
+				</div>
+				<div class="input-newpost2">
+					<input type="text" name="group[description]" value="<%=group.description%>" style="height:90px; width:100%;">
+				</div>
+				<div>
+					<input id="input-newpost1-choosefile" type="file" name="group[image]" value="<%=group.image%>">
+				</div>
+				<div>
+					<button class="btn btn-default createnew-submit">Submit</button>
+				</div>	
+			</form>
+		</div>
+		
+		
+	</div>
+	
+<% include ../partials/footer %>

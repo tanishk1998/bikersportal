@@ -1,0 +1,56 @@
+<%include partials/header%>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 ">
+				<p class="lead">BikersPortal</p>
+				<div class="list-group">
+					<li class="list-group-item active">Info</li>
+					<!-- <li class="list-group-item">Info 2</li>
+					<li class="list-group-item">Info 3</li> -->
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="thumbnail">
+					<p><img  class="img-responsive" src=<%=post.image%>></p>
+					<div class="caption-full">
+						<h4><a><%= post.title%></a></h4>
+						<p><%=post.description%></p>
+						<p><b><em>SUBMITTED BY <%=post.author.username%></em></b></p>
+						<% if(currentUser && post.author.id.equals(currentUser._id)){ %>
+							<a class="btn btn-warning" href="/posts/<%=post._id%>/edit">EDIT</a>
+							<form id="delete-form" action="/posts/<%=post._id%>?_method=DELETE" method="POST">
+								<button class="btn btn-danger">DELETE</button>
+							</form>
+						<%}%>
+					</div>
+					
+				</div>
+				<div class="well">
+					<p><a href="/posts/<%=post._id%>/comments/new" class="btn btn-sm btn-success pull-right">ADD NEW COMMENT</a></p>
+					<hr>
+
+					<%comments.forEach(function(comment){%>
+						<%=if(comment.post.id.equals(post._id)){%>
+							<div class="row">
+								<div class="col-md-12">
+									<%= comment.author.username %>
+									<span class="pull-right">10 days ago</span>
+									<p>
+										<%= comment.text%>
+									</p>
+									<a class="btn btn-xs btn-warning" href="/posts/<%=post._id%>/comments/:comment_id/edit">EDIT</a>
+								</div>
+							</div>
+						<%}%>
+					<%}) %>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	
+	
+	
+<%include partials/footer%>

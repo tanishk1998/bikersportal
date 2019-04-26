@@ -1,0 +1,17 @@
+<%include ../partials/header %>
+<div class="about-container">
+	<div class="container jumbotron about-jumbotron">
+		<p><b>Name - </b><%=user.name%></p>
+		<p><b>Username - </b> <%=user.username%></p>
+		<!-- <p><b>Date Of Birth - </b> <%=user.DOB%></p> -->
+		<p><b>Email-ID - </b> <%=user.email%></p>
+		<p><b>Address - </b> <%=user.address%></p>
+		<p><b>Description - </b> <%=user.description%></p>
+
+		<%if(user._id.equals(currentUser)){%>
+			<a class="btn btn-default edit-info-button" href="/profile/<%=user._id%>/edit">Edit Info</a>
+		<%}%>
+	</div>
+</div>
+	
+<%include ../partials/footer %>
